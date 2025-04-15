@@ -1,0 +1,312 @@
+/* Base (dark theme) variables */
+:root {
+  --color-background: #0a0a0a;
+  --color-text: #f5f5f5;
+  --color-header-bg: #001e44;
+  --color-header-text: #ffffff;
+  --color-link: #96bee6;
+  --color-link-hover: #1e407c;
+  --color-card-bg: #001e44;
+  --color-card-border: #1e407c;
+  --color-skill-bg: #1e407c;
+  --color-skill-text: #ffffff;
+  --color-footer-text: #c9c9c9;
+
+  --font-heading: "Special Elite", system-ui;
+  --font-body: "Open Sans", sans-serif;
+  --transition: 0.3s ease;
+
+  /* Headings in dark mode: use body text color (light) */
+  --color-heading: var(--color-text);
+}
+
+/* Light‑theme overrides */
+html[data-theme="light"] {
+  --color-background: #f5f5f5;
+  --color-text: #0a0a0a;
+  --color-header-bg: #001e44;
+  --color-header-text: #ffffff;
+  --color-link: #1e407c;
+  --color-link-hover: #001e44;
+  --color-card-bg: #ffffff;
+  --color-card-border: #c9c9c9;
+  --color-skill-bg: #001e44;
+  --color-skill-text: #ffffff;
+  --color-footer-text: #c9c9c9;
+
+  /* Headings in light mode: navy heading text for contrast on white background */
+  --color-heading: var(--color-header-bg);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+  transition: var(--transition);
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: var(--transition);
+}
+a:hover {
+  color: var(--color-link-hover);
+}
+
+nav a:hover {
+  color: var(--color-link);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+header {
+  background: var(--color-header-bg);
+  color: var(--color-header-text);
+  padding: 1rem 0;
+}
+header .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+header h1 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--color-header-text);
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav li + li {
+  margin-left: 1rem;
+}
+nav a {
+  font-weight: bold;
+  color: var(--color-header-text);
+}
+
+#theme-toggle {
+  background: none;
+  border: 1px solid var(--color-header-text);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  color: var(--color-header-text);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+#theme-toggle:hover {
+  background: var(--color-header-text);
+  color: var(--color-header-bg);
+}
+
+h2 {
+  font-family: var(--font-heading);
+  margin-bottom: 1.5rem 0 0.5rem;
+  color: var(--color-heading);
+}
+main h1 {
+  font-family: var(--font-heading);
+  color: var(--color-heading);
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--color-link-hover);
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.skills-list,
+.resume-list,
+.projects-grid {
+  list-style: none;
+}
+
+.skills-list li {
+  display: inline-block;
+  background: var(--color-skill-bg);
+  color: var(--color-skill-text);
+  padding: 0.3rem 0.6rem;
+  margin: 0.3rem 0.5rem 0.5rem 0;
+  border-radius: 4px;
+}
+
+/* PROJECT CARDS */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  transition: var(--transition);
+}
+.project-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.project-card h3 {
+  margin-bottom: 0.5rem;
+}
+.project-card {
+  display: block;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: 6px;
+  padding: 1rem;
+  transition: var(--transition);
+}
+.project-card a {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--color-link);
+}
+
+.project-content {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.project-thumb {
+  display: inline-block;
+  width: 250px;
+  vertical-align: top;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-thumb:hover {
+  transform: scale(1.03);
+}
+
+/* Lightbox Styles */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 80%; /* Set max width to ensure the image doesn't stretch too large */
+  max-height: 80%; /* Set max height to fit the viewport */
+  object-fit: contain; /* Preserve the aspect ratio of the image */
+  border-radius: 8px;
+}
+
+/* RESUME ITEMS */
+.resume-item {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: 6px;
+  padding: 1.2rem 1rem;
+  margin-bottom: 1.5rem;
+}
+.resume-item .role {
+  font-size: 1.25rem;
+  margin-bottom: 0.2rem;
+  color: var(--color-link);
+}
+.resume-item .company {
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  color: var(--color-link);
+}
+.resume-item .company span {
+  font-weight: normal;
+  color: var(--color-silver);
+  margin-left: 0.5rem;
+}
+.responsibilities {
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+.responsibilities li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  text-indent: 0;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: var(--color-footer-text);
+}
+
+/* ✅ Responsive nav & layout */
+@media (max-width: 600px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav li + li {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+
+  #theme-toggle {
+    margin-top: 0.5rem;
+  }
+
+  /* ✅ Stack image and text vertically on mobile */
+  .project-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-thumb {
+    width: 100%;
+    height: auto;
+  }
+}

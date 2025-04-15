@@ -1,0 +1,118 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FLES1KD2YE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FLES1KD2YE');
+</script>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Jason Luster</h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="about.html">About</a>
+            </li>
+            <li>
+              <a href="resume.html">Resume</a>
+            </li>
+          </ul>
+        </nav>
+        <button id="theme-toggle" aria-label="Toggle theme">Light Mode</button>
+      </div>
+    </header>
+    <main class="container">
+      <section class="section about">
+        <h2>About Me</h2>
+        <div class="resume-item">
+          <img src="images/jason-luster.png" alt="Jason Luster" class="profile-pic">
+          <p> Hi, I’m <strong>Jason Luster</strong>, an experienced IT professional based in York, Pennsylvania, with a passion for turning complex challenges into streamlined digital solutions. I bring over nine years in Information Technology and seventeen years in the financial services industry, where I’ve consistently delivered technology that drives organizational value and operational efficiency. </p>
+          <br>
+          <p> Currently, I lead the Business Automation division at Patriot Federal Credit Union, where I oversee a talented team focused on reimagining how we work. We manage digital transformation projects from discovery and development through deployment and support. Our goal is to streamline internal processes and build a resilient, secure, and future-ready technology foundation. </p>
+          <br>
+          <p> My day-to-day work revolves around the Microsoft 365 ecosystem, where I use Power Apps, Power Automate, and SharePoint to create powerful, low-code business solutions. I also manage integrations with platforms like Adobe and DocuSign, ensuring our digital tools work seamlessly together to support the organization’s mission. </p>
+          <br>
+          <p> My passion for software development sparked in 2014 at DVLUP Day in New York City, and it’s been fueling my professional journey ever since. While I specialize in low-code development, I’m always exploring new tools and technologies to broaden my skill set and stay ahead of the curve. </p>
+          <br>
+          <p> On the personal side, I’m a devoted Christian, husband, and father. I love keeping up with tech trends, spending quality time with my family, reading, hitting the beach, and kicking around a soccer ball when I get the chance. </p>
+          <br>
+          <p> Want to dive deeper into my background and experience? <a href="resume.html">Check out my resume</a>. </p>
+          <br>
+          <p>Thanks for visiting!</p>
+        </div>
+      </section>
+      <section class="section skills">
+        <h2>Leadership & Management Skills</h2>
+        <ul class="skills-list">
+          <li>Cross-Functional Collaboration</li>
+          <li>Performance Management</li>
+          <li>Process Improvement</li>
+          <li>Project Management</li>
+          <li>Stakeholder Communication</li>
+          <li>Strategic Planning</li>
+          <li>Team Leadership</li>
+          <li>Training & Development</li>
+          <li>Vendor Management</li>
+        </ul>
+        <br>
+        <h2>Technical & Analytical Skills</h2>
+        <ul class="skills-list">
+          <li>Business Analysis</li>
+          <li>HTML / CSS</li>
+          <li>JavaScript</li>
+          <li>Requirements Gathering</li>
+          <li>Technical Writing</li>
+        </ul>
+        <br>
+        <h2>Software</h2>
+        <ul class="skills-list">
+          <li>Microsoft Azure</li>
+          <li>Microsoft Entra ID</li>
+          <li>Microsoft SharePoint</li>
+          <li>Microsoft Teams</li>
+          <li>Office 365 Suite</li>
+          <li>Power Apps</li>
+          <li>Power Automate</li>
+          <li>PowerShell</li>
+          <li>Windows 11</li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>© <span id="year"></span> Jason Luster · <a href="mailto:jason@jluster.com">jason@jluster.com</a>
+      </p>
+    </footer>
+    <script>
+      (function() {
+        const toggle = document.getElementById('theme-toggle');
+        const saved = localStorage.getItem('theme');
+        const theme = saved || 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+        updateText(theme);
+        toggle.addEventListener('click', () => {
+          const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', next);
+          localStorage.setItem('theme', next);
+          updateText(next);
+        });
+
+        function updateText(t) {
+          toggle.textContent = t === 'dark' ? '☀️ Light Theme' : '🌙 Dark Theme';
+        }
+        document.getElementById('year').textContent = new Date().getFullYear();
+      })();
+    </script>
+  </body>
+</html>

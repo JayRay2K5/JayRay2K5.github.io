@@ -1,264 +1,170 @@
+<!-- resume.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Resume | Jason Luster | Digital Solutions Manager</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Special+Elite&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="style.css">
   </head>
-  <body class="resume">
-    <a class="btn download-link" href="jluster-resume.pdf">Download PDF</a>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FLES1KD2YE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <!-- //  INTRO  // -->
-
+  gtag('config', 'G-FLES1KD2YE');
+</script>
+  <body>
     <header>
-      <div class="content-wrapper">
+      <div class="container">
         <h1>Jason Luster</h1>
-        <h2>Digital Solutions Manager</h2>
+        <nav>
+          <ul>
+            <li>
+              <a href="about.html">About</a>
+            </li>
+            <li>
+              <a href="resume.html">Resume</a>
+            </li>
+          </ul>
+        </nav>
+        <button id="theme-toggle" aria-label="Toggle theme">Light Mode</button>
       </div>
     </header>
-
-    <main class="content-wrapper">
-      <!-- //  PROFILE  // -->
-
-      <section class="resume-section">
-        <h2>Profile</h2>
-        <p>
-          Results-oriented digital transformation leader with over eight years
-          of proven expertise in strategizing, executing, and optimizing
-          mission-critical technology solutions. Recognized for consistently
-          delivering high-quality results through innovative approaches and
-          meticulous attention to detail. Committed to making a meaningful
-          impact and providing unparalleled value.
-        </p>
-        <a href="index.html">Back to homepage</a>
+    <main class="container">
+      <!-- Work Experience -->
+      <section class="section resume">
+        <h2>Work Experience</h2>
+        <!-- Job 4 -->
+        <article class="resume-item">
+          <h3 class="role">Digital Solutions Manager</h3>
+          <p class="company"> Patriot Federal Credit Union <span>| Oct 2024 – Present</span>
+          </p>
+          <ul class="responsibilities">
+            <li>Lead the Business Automation division within IT, managing a high-performing team focused on reimagining internal workflows and driving digital transformation.</li>
+            <li>Oversee full project lifecycles—from discovery and development to deployment and ongoing support—delivering secure, scalable solutions that future-proof the organization.</li>
+            <li>Design and implement low-code business solutions to streamline processes and increase operational efficiency.</li>
+            <li>Champion a technology-driven culture that supports innovation, adaptability, and long-term organizational growth.</li>
+          </ul>
+        </article>
+        <!-- Job 3 -->
+        <article class="resume-item">
+          <h3 class="role">Application Analyst II</h3>
+          <p class="company"> Marine Federal Credit Union <span>| Sep 2022 – Oct 2024</span>
+          </p>
+          <ul class="responsibilities">
+            <li>Led the architecture of a centralized knowledge base using SharePoint Online and PnP Modern Search, successfully replacing a legacy third-party solution.</li>
+            <li>Designed and deployed a modern SharePoint intranet with integrated automated workflows, streamlining team collaboration and communication.</li>
+            <li>Developed custom Power Apps to support employee forums and recognition programs, significantly boosting engagement and participation.</li>
+            <li>Automated key business processes such as policy reviews, approval workflows, internal announcements, and news alerts to minimize manual effort and improve accuracy.</li>
+          </ul>
+        </article>
+        <!-- Job 2 -->
+        <article class="resume-item">
+          <h3 class="role">Application Analyst</h3>
+          <p class="company"> Traditions Bank <span>| Oct 2018 – Sep 2022</span>
+          </p>
+          <ul class="responsibilities">
+            <li>Analyzed business and IT requirements and recommended solutions to stakeholders.</li>
+            <li>Improved technology integration by identifying process gaps and opportunities.</li>
+            <li>Created training materials and led sessions for end users and junior analysts.</li>
+            <li>Managed vendor relationships, licenses, and software upgrades per CIO directives.</li>
+            <li>Served as Project Manager and Technical Lead for both departmental and enterprise-wide projects.</li>
+          </ul>
+        </article>
+        <!-- Job 1 -->
+        <article class="resume-item">
+          <h3 class="role">Help Desk Analyst II</h3>
+          <p class="company"> PeoplesBank, A Codorus Valley Company <span>| Feb 2016 – Oct 2018</span>
+          </p>
+          <ul class="responsibilities">
+            <li>Provided Tier I support via phone and email for hardware, software, and network issues.</li>
+            <li>Handled daily operations such as online banking processing, report distribution, and backups.</li>
+            <li>Assisted analysts with troubleshooting, vendor management, and case documentation.</li>
+            <li>Performed desktop support including PC setup, printer maintenance, and in-person user assistance.</li>
+          </ul>
+        </article>
       </section>
-
-      <!-- //  PROJECTS  // -->
-
-      <section class="resume-section">
-        <h2>Projects</h2>
-        <p>
-          View selected projects below.<!--More information can be found at <a href="" target="_blank">.com</a>.-->
-        </p>
-        <div class="project-wrapper">
-          <section class="project-item">
-            <img
-              src="images/project-page-feedback-500px.png"
-              srcset="images/project-page-feedback-1000px.png 2x"
-              alt="Page Feedback Thumbnail"
-            />
-            <h3>Page Feedback Web Part for SharePoint (SPFx)</h3>
-            <p>
-              This Page Feedback Web Part is developed using TypeScript, CSS
-              Modules, and the SharePoint Framework (SPFx) to gather user
-              feedback on SharePoint pages. Users can provide feedback through
-              Like, Dislike, or Neutral responses, with a text box for
-              additional comments.
-            </p>
-          </section>
-          <section class="project-item">
-            <img
-              src="images/project-resume-500px.png"
-              srcset="images/project-resume-1000px.png 2x"
-              alt="Portfolio Site Thumbnail"
-            />
-            <h3>Portfolio & Resume Site</h3>
-            <p>
-              This project represents my initial foray into web development.
-              Using HTML and CSS, I focused on applying core design principles
-              such as the box model, Flexbox, Grid, and typography. This serves
-              as a practical demonstration of my understanding of responsive
-              design and layout techniques, reflecting my approach to blending
-              foundational skills with modern web standards.
-            </p>
-          </section>
+      <section class="section projects">
+        <h2>Software Projects</h2>
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-content">
+            <img src="images/project-page-feedback-1000px.png" alt="Screenshot of Page Feedback Web Part" class="project-thumb" data-full="images/project-page-feedback-1000px.png">
+            <div>
+              <h3>Page Feedback Web Part for SharePoint</h3>
+              <p>This Page Feedback Web Part is built using TypeScript, CSS Modules, and SPFx. It enables Like, Dislike, or Neutral feedback with optional comments. Responses are consolidated in a SharePoint List categorized as Positive, Negative, or Neutral. Administrators can assign these items and respond as needed.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-content">
+            <img src="images/project-resume-1000px.png" alt="Screenshot of Portfolio and Resume Site" class="project-thumb" data-full="images/project-resume-1000px.png">
+            <div>
+              <h3>Portfolio & Resume Site</h3>
+              <p>This project marked my first hands-on experience with web development. Using HTML and CSS, I focused on layout fundamentals like the box model, Flexbox, and Grid, while applying modern design principles such as responsive typography.</p>
+            </div>
+          </div>
         </div>
       </section>
-
-      <!-- //  WORK EXPERIENCE  // -->
-
-      <section class="resume-section">
-        <h2>Work Experience</h2>
-        <p>
-          My complete work history is available on
-          <a href="https://linkedin.com/in/jason-luster" target="_blank"
-            >LinkedIn</a
-          >
-        </p>
-
-        <section class="work-item">
-          <div class="work-details">
-            <h3>Digital Solutions Manager</h3>
-            <p>Patriot Federal Credit Union</p>
-            <p>Oct 2024 - Present</p>
-          </div>
-
-          <div class="work-summary">
-            <p>
-              I lead the Digital Solutions division within Patriot FCU's IT
-              Department, where we develop and implement innovative solutions to
-              streamline internal processes and enhance organizational
-              efficiency. Our team manages the full lifecycle of digital
-              transformation projects, from concept through execution, driving
-              advancements that strengthen Patriot FCU’s digital infrastructure
-              and ensure seamless and secure operations. Through our work, we
-              are helping shape a forward looking, technology driven culture
-              that supports the organization’s growth and adaptability.
-            </p>
-            <!-- <p>Key Contributions:</p>
-            <ul>
-              <li>
-              </li>
-              <li>
-              </li>
-              <li>
-              </li>
-            </ul> -->
-          </div>
-        </section>
-
-        <section class="work-item">
-          <div class="work-details">
-            <h3>Application Analyst II</h3>
-            <p>Marine Federal Credit Union</p>
-            <p>Sep 2022 - Oct 2024</p>
-          </div>
-
-          <div class="work-summary">
-            <ul>
-              <li>
-                Orchestrated the design and implementation of a cutting-edge
-                SharePoint intranet, alongside automated workflows and low-code
-                solutions. This initiative facilitated a smooth transition from
-                the outdated intranet, empowering our teams with a more
-                intuitive and collaborative platform.
-              </li>
-              <li>
-                Pioneered the creation of bespoke Power Apps tailored to our
-                specific needs, revolutionizing systems such as employee forums
-                and recognition programs. These custom applications not only
-                replaced outdated tools but also enhanced user experience and
-                engagement.
-              </li>
-              <li>
-                Engineered automated workflows for critical processes such as
-                Policy & Guideline review, announcements, and organizational
-                news notifications. By automating these workflows, we
-                significantly reduced manual workload and mitigated the risk of
-                errors, ultimately fostering a more efficient and
-                error-resistant environment.
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="work-item">
-          <div class="work-details">
-            <h3>Application Analyst</h3>
-            <p>Traditions Bank</p>
-            <p>Oct 2018 - Sep 2022</p>
-          </div>
-
-          <div class="work-summary">
-            <ul>
-              <li>
-                Analyzed business and information technology requirements,
-                researched solutions, and provided recommendations to key
-                stakeholders across the organization.
-              </li>
-              <li>
-                Assisted with the modification of business processes to improve
-                technology integration, identifying any weaknesses, gaps, and
-                opportunities for improvement.
-              </li>
-              <li>
-                Created and delivered training sessions and documentation to end
-                users and administrators. I trained, mentored, and provided
-                guidance to the Junior Analyst(s).
-              </li>
-              <li>
-                Maintained relationships with vendors to manage licenses, review
-                contracts, and implement the latest software enhancements as
-                instructed by the Chief Information Officer.
-              </li>
-              <li>
-                Provided leadership to project teams by filling Project Manager
-                and Technical Lead roles throughout all stages of the project
-                lifecycle. These projects ranged in scope from single department
-                to organization-wide solutions.
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="work-item">
-          <div class="work-details">
-            <h3>Help Desk Analyst II</h3>
-            <p>PeoplesBank, A Codorus Valley Company</p>
-            <p>Feb 2016 - Oct 2018</p>
-          </div>
-
-          <div class="work-summary">
-            <ul>
-              <li>
-                Provided Tier I Information Technology support to end users via
-                phone and e-mail.
-              </li>
-              <li>
-                Completed daily processing activities including operations
-                tasks; and end of day processing for online banking, core
-                banking, report preparation and distribution, notice and check
-                printing, and network backups.
-              </li>
-              <li>
-                Assisted Application Analysts with projects, troubleshooting,
-                vendor management, case management, and other assignments.
-              </li>
-              <li>
-                Provided desktop support as needed under the direction of the
-                network support team. This included tasks related to hardware
-                and software inventory management; PC, thin-client terminal, and
-                laptop setup and maintenance; printer maintenance; management of
-                loaner devices and projectors; and in-person user support.
-              </li>
-            </ul>
-          </div>
-        </section>
-      </section>
-
-      <!-- //  EDUCATION & CERTIFICATIONS  // -->
-
-      <section class="resume-section">
-        <h2>Education</h2>
-
-        <section class="education-item">
-          <h3>Dallastown Area High School</h3>
-          <p>High School Diploma, 2005</p>
-        </section>
-      </section>
     </main>
-
-    <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
     <footer>
-      <p>
-        © 2024 by Jason Luster |
-        <a href="mailto:Jason@jluster.com">Jason@jluster.com</a>
+      <p>© <span id="year"></span> Jason Luster · <a href="mailto:jason@jluster.com">jason@jluster.com</a>
       </p>
-
-      <ul class="socials">
-        <li>
-          <a href="https://www.linkedin.com/in/jason-luster/" target="_blank"
-            ><img src="images/icon-logo-linkedin.png" alt="My LinkedIn Profile"
-          /></a>
-        </li>
-      </ul>
     </footer>
+    <script>
+      (function() {
+        const toggle = document.getElementById('theme-toggle');
+        const saved = localStorage.getItem('theme');
+        const theme = saved || 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+        updateText(theme);
+        toggle.addEventListener('click', () => {
+          const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', next);
+          localStorage.setItem('theme', next);
+          updateText(next);
+        });
+
+        function updateText(t) {
+          toggle.textContent = t === 'dark' ? '☀️ Light Theme' : '🌙 Dark Theme';
+        }
+        document.getElementById('year').textContent = new Date().getFullYear();
+      })();
+    </script>
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+      <img src="" alt="Full-size project image" id="lightbox-img">
+    </div>
+    <script>
+      const lightbox = document.getElementById("lightbox"); // Get the lightbox container
+      const lightboxImg = document.getElementById("lightbox-img"); // Get the lightbox image
+      const thumbs = document.querySelectorAll(".project-thumb"); // Get all project thumbnails
+      thumbs.forEach(thumb => {
+        thumb.addEventListener("click", () => {
+          const fullImageUrl = thumb.getAttribute("data-full"); // Get the full-size image URL from the 'data-full' attribute
+          lightboxImg.src = fullImageUrl; // Set the lightbox image source to the full image
+          lightbox.classList.add("open"); // Show the lightbox
+        });
+      });
+      // Close the lightbox when clicking outside the image
+      lightbox.addEventListener("click", (e) => {
+        // If the image is clicked, don't close the lightbox
+        if (e.target !== lightboxImg) {
+          lightbox.classList.remove("open"); // Hide the lightbox
+          lightboxImg.src = ""; // Clear the lightbox image
+        }
+      });
+      // Close the lightbox when pressing the Escape key
+      document.addEventListener("keydown", e => {
+        if (e.key === "Escape") {
+          lightbox.classList.remove("open");
+          lightboxImg.src = "";
+        }
+      });
+    </script>
   </body>
 </html>

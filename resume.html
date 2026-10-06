@@ -1,0 +1,190 @@
+<!-- resume.html -->
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Resume | Jason Luster | Business Automation Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FLES1KD2YE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-FLES1KD2YE');
+</script>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Jason Luster</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">About</a>
+          </li>
+          <li>
+            <a href="resume.html">Resume</a>
+          </li>
+          <li>
+            <a href="links.html">Links</a>
+          </li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" aria-label="Toggle theme">Light Mode</button>
+    </div>
+  </header>
+  <main class="container">
+    <!-- Work Experience -->
+    <section class="section resume">
+      <h2>Work Experience</h2>
+      <!-- Job 4 -->
+      <article class="resume-item">
+        <h3 class="role">Business Automation Manager</h3>
+        <p class="company"> Patriot Federal Credit Union <span>| Oct 2024 – Present</span>
+        </p>
+        <ul class="responsibilities">
+          <li>Lead the Business Automation division within IT, managing a high-performing team focused on reimagining
+            internal workflows and driving digital transformation.</li>
+          <li>Oversee full project lifecycles, guiding them through discovery, development, deployment, and ongoing
+            support while delivering secure, scalable solutions that future-proof the organization.</li>
+          <li>Design and implement low-code business solutions to streamline processes and increase operational
+            efficiency.</li>
+          <li>Champion a technology-driven culture that supports innovation, adaptability, and long-term organizational
+            growth.</li>
+        </ul>
+      </article>
+      <!-- Job 3 -->
+      <article class="resume-item">
+        <h3 class="role">Application Analyst II</h3>
+        <p class="company"> Marine Federal Credit Union <span>| Sep 2022 – Oct 2024</span>
+        </p>
+        <ul class="responsibilities">
+          <li>Led the architecture of a centralized knowledge base using SharePoint Online and PnP Modern Search,
+            successfully replacing a legacy third-party solution.</li>
+          <li>Designed and deployed a modern SharePoint intranet with integrated automated workflows, streamlining team
+            collaboration and communication.</li>
+          <li>Developed custom Power Apps to support employee forums and recognition programs, significantly boosting
+            engagement and participation.</li>
+          <li>Automated key business processes such as policy reviews, approval workflows, internal announcements, and
+            news alerts to minimize manual effort and improve accuracy.</li>
+        </ul>
+      </article>
+      <!-- Job 2 -->
+      <article class="resume-item">
+        <h3 class="role">Application Analyst</h3>
+        <p class="company"> Traditions Bank <span>| Oct 2018 – Sep 2022</span>
+        </p>
+        <ul class="responsibilities">
+          <li>Analyzed business and IT requirements and recommended solutions to stakeholders.</li>
+          <li>Improved technology integration by identifying process gaps and opportunities.</li>
+          <li>Created training materials and led sessions for end users and junior analysts.</li>
+          <li>Managed vendor relationships, licenses, and software upgrades per CIO directives.</li>
+          <li>Served as Project Manager and Technical Lead for both departmental and enterprise-wide projects.</li>
+        </ul>
+      </article>
+      <!-- Job 1 -->
+      <article class="resume-item">
+        <h3 class="role">Help Desk Analyst II</h3>
+        <p class="company"> PeoplesBank, A Codorus Valley Company <span>| Feb 2016 – Oct 2018</span>
+        </p>
+        <ul class="responsibilities">
+          <li>Provided Tier I support via phone and email for hardware, software, and network issues.</li>
+          <li>Handled daily operations such as online banking processing, report distribution, and backups.</li>
+          <li>Assisted analysts with troubleshooting, vendor management, and case documentation.</li>
+          <li>Performed desktop support including PC setup, printer maintenance, and in-person user assistance.</li>
+        </ul>
+      </article>
+    </section>
+    <section class="section projects">
+      <h2>Software Projects</h2>
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="project-content">
+          <img src="images/project-page-feedback-1000px.png" alt="Screenshot of Page Feedback Web Part"
+            class="project-thumb" data-full="images/project-page-feedback-1000px.png">
+          <div>
+            <h3>Page Feedback Web Part for SharePoint</h3>
+            <p>This Page Feedback Web Part is built using TypeScript, CSS Modules, and SPFx. It enables Like, Dislike,
+              or Neutral feedback with optional comments. Responses are consolidated in a SharePoint List categorized as
+              Positive, Negative, or Neutral. Administrators can assign these items and respond as needed.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-content">
+          <img src="images/project-resume-1000px.png" alt="Screenshot of Portfolio and Resume Site"
+            class="project-thumb" data-full="images/project-resume-1000px.png">
+          <div>
+            <h3>Portfolio & Resume Site</h3>
+            <p>This project marked my first hands-on experience with web development. Using HTML and CSS, I focused on
+              layout fundamentals like the box model, Flexbox, and Grid, while applying modern design principles such as
+              responsive typography.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© <span id="year"></span> Jason Luster · <a href="mailto:jason@jluster.com">jason@jluster.com</a>
+    </p>
+  </footer>
+  <script>
+    (function () {
+      const toggle = document.getElementById('theme-toggle');
+      const saved = localStorage.getItem('theme');
+      const theme = saved || 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+      updateText(theme);
+      toggle.addEventListener('click', () => {
+        const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        updateText(next);
+      });
+
+      function updateText(t) {
+        toggle.textContent = t === 'dark' ? '☀️ Light Theme' : '🌙 Dark Theme';
+      }
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <img src="" alt="Full-size project image" id="lightbox-img">
+  </div>
+  <script>
+    const lightbox = document.getElementById("lightbox"); // Get the lightbox container
+    const lightboxImg = document.getElementById("lightbox-img"); // Get the lightbox image
+    const thumbs = document.querySelectorAll(".project-thumb"); // Get all project thumbnails
+    thumbs.forEach(thumb => {
+      thumb.addEventListener("click", () => {
+        const fullImageUrl = thumb.getAttribute("data-full"); // Get the full-size image URL from the 'data-full' attribute
+        lightboxImg.src = fullImageUrl; // Set the lightbox image source to the full image
+        lightbox.classList.add("open"); // Show the lightbox
+      });
+    });
+    // Close the lightbox when clicking outside the image
+    lightbox.addEventListener("click", (e) => {
+      // If the image is clicked, don't close the lightbox
+      if (e.target !== lightboxImg) {
+        lightbox.classList.remove("open"); // Hide the lightbox
+        lightboxImg.src = ""; // Clear the lightbox image
+      }
+    });
+    // Close the lightbox when pressing the Escape key
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape") {
+        lightbox.classList.remove("open");
+        lightboxImg.src = "";
+      }
+    });
+  </script>
+</body>
+
+</html>
